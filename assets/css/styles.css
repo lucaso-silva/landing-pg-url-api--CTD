@@ -1,4 +1,5 @@
 @import url("./styles/header.css");
+@import url("./styles/banner.css");
 
 :root {
   --main-font: "Poppins", sans-serif;
@@ -26,11 +27,24 @@
 }
 
 body {
+  font-family: var(--main-font);
   font-size: 18px;
 }
 
 a {
   text-decoration: none;
-  font-family: var(--main-font);
   cursor: pointer;
+}
+
+.btn-circle {
+  background-color: var(--cyan);
+  padding: .35em 1.25em;
+  border-radius: 17px;
+  color: var(--white);
+}
+
+.btn-circle:hover {
+  opacity: .5;
+  border: .15em solid var(--dark-violet);
+  color: var(--very-dark-violet);
 }
