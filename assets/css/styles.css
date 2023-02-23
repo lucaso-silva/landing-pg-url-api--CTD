@@ -1,0 +1,36 @@
+@import url("./styles/header.css");
+
+:root {
+  --main-font: "Poppins", sans-serif;
+  /* Primary */
+
+  --cyan: #2acfcf;
+  --dark-violet: #3b3054;
+
+  /* Secondary  */
+
+  --red: #f46262;
+
+  /* Neutral */
+
+  --gray: #bfbfbf;
+  --grayish-violet: #9e9aa7;
+  --very-dark-blue: #35323e;
+  --very-dark-violet: #232127;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--main-font);
+  cursor: pointer;
+}

@@ -10,26 +10,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
     <header>
-        <div>
-            <h1>Shortly</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Resources</a></li>
-                </ul>
-            </nav>
+    <h1 class="logo-header">Shortly</h1>
+    <nav class="menu">
+        <ul class="menu-options">
+            <li class="options-li"><a href="#" class="options-link">Features</a></li>
+            <li class="options-li"><a href="#" class="options-link">Pricing</a></li>
+            <li class="options-li"><a href="#" class="options-link">Resources</a></li>
+        </ul>
+        <div class="menu-user">
+            <a href="#" class="user-login">Login</a>
+            <a href="#" class="user-signup">Sign Up</a>
         </div>
-        <div>
-            <a href="#">Login</a>
-            <a href="#">Sign Up</a>
-        </div>
+    </nav>
+    <div class="menu-hamburger">
+        <input type="checkbox" class="menu-hamburger-checkbx" id="menu-hamburger">
+        <label id="menu-hamburger" class="img-menu"></label>
+    </div>
     </header>
+
     <section class="banner">
         <h1>More than just shorter links</h1>
         <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
@@ -68,17 +71,20 @@
         <div class="card">
             <img src="./assets/img/icon-brand-recognition.svg" alt="Icon related to brand recognition boost">
             <h3>Brand Recognition</h3>
-            <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
+            <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil
+                confidence in your content.</p>
         </div>
         <div class="card">
             <img src="./assets/img/icon-detailed-records.svg" alt="Icon related to detailed records">
             <h3>Detailed Records</h3>
-            <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+            <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content
+                helps inform better decisions.</p>
         </div>
         <div class="card">
             <img src="./assets/img/icon-fully-customizable.svg" alt="Icon related to customization, arts tools">
             <h3>Fully Customizable</h3>
-            <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+            <p>Improve brand awareness and content discoverability through customizable links, supercharging audience
+                engagement.</p>
         </div>
     </section>
     <section>
@@ -86,7 +92,7 @@
         <a href="#">Get Started</a>
     </section>
     <footer>
-        <h2>Shortly</h2>
+        <h2 class="logo-footer">Shortly</h2>
         <ul>
             <li>Features</li>
             <li><a href="#">Link Shortening</a></li>

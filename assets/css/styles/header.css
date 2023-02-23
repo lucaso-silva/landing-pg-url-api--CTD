@@ -1,0 +1,89 @@
+header {
+    padding: 1.75em .95em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-header {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.menu {
+    display: none;
+}
+.menu-hamburger-checkbx {
+    display: none;
+}
+
+.img-menu {
+    background-image: url("../../img/bars-solid.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        justify-content: space-evenly;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 65%;
+    }
+
+    .menu-options {
+        display: flex;
+        font-size: .85rem;
+        font-weight: 700;
+    }
+
+    .options-li {
+        margin-right: 1em;
+    }
+
+    .options-link {
+        color: var(--grayish-violet);
+    }
+
+    .options-link:hover {
+        color: var(--very-dark-violet);
+    }
+    
+    .menu-hamburger {
+        display: none;
+    }
+
+    .menu-user {
+        font-size: .8rem;
+        font-weight: 600;
+    }
+
+    .user-login {
+        margin-right: 1.75em;
+        color: var(--grayish-violet);
+    }
+
+    .user-login:hover {
+        color: var(--very-dark-violet);
+    }
+
+    .user-signup {
+        background-color: var(--cyan);
+        padding: .35em 1.25em;
+        border-radius: 15px;
+        color: var(--white);
+        transition: 1s;
+    }
+
+    .user-signup:hover {
+        opacity: .5;
+        border: .25em solid var(--dark-violet);
+    }
+}
