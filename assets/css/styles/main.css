@@ -1,0 +1,63 @@
+.new-url {
+    background-image: url("../../img/bg-shorten-mobile.svg");
+    background-color: var(--dark-violet);
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 1em 2em;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 8px;
+}
+
+.input-url {
+    box-sizing: border-box;
+    width: 100%;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 1.125em;
+}
+
+.input-url::placeholder {
+    padding-left: 1em;
+}
+
+.input-btn {
+    width: 100%;
+}
+
+.urls-list {
+    margin: .85em 0;
+    box-sizing: border-box;
+}
+
+.url-line {
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+    background-color: var(--white);
+    margin-bottom: .5em;
+}
+
+.url-line p:first-child {
+    border-bottom: .1em solid var(--grayish-violet);
+}
+
+@media screen and (min-width: 768px) {
+    .new-url {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .input-url {
+        margin-bottom: 0;
+        width: 60%;
+    }
+
+    .input-btn {
+        width: auto;
+    }
+}

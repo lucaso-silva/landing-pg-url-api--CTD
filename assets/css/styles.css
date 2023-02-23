@@ -1,5 +1,6 @@
 @import url("./styles/header.css");
 @import url("./styles/banner.css");
+@import url("./styles/main.css");
 
 :root {
   --main-font: "Poppins", sans-serif;
@@ -47,4 +48,17 @@ a {
   opacity: .5;
   border: .15em solid var(--dark-violet);
   color: var(--very-dark-violet);
+}
+
+.btn-retng {
+  background-color: var(--cyan);
+  padding: .35em 1.25em;
+  border-radius: 5px;
+  color: var(--white);
+  border: none;
+}
+
+.container {
+  background-color: var(--grayish-violet);
+  padding: 0 1.5em;
 }
