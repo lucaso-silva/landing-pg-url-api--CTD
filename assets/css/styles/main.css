@@ -37,13 +37,28 @@
 .url-line {
     display: flex;
     flex-direction: column;
-    padding: .5em;
+    padding: .75em;
     background-color: var(--white);
-    margin-bottom: .5em;
+    margin-bottom: .75em;
+    border-radius: 8px;
 }
 
 .url-line p:first-child {
     border-bottom: .1em solid var(--grayish-violet);
+}
+
+.long-url {
+    padding-bottom: .75em;
+    color: var(--dark-violet);
+}
+
+.shrt-url {
+    padding: .75em 0;
+    color: var(--cyan);
+}
+
+.btn-copy:active {
+    background-color: var(--dark-violet);
 }
 
 @media screen and (min-width: 768px) {
@@ -59,5 +74,24 @@
 
     .input-btn {
         width: auto;
+    }
+
+    .url-line {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .url-line p:first-child {
+        border-bottom: none;
+    }
+
+    .long-url {
+        padding: .5em 0;
+        margin-right: 3.75em;
+    }
+
+    .shrt-url {
+        padding: .5em 0;
     }
 }
