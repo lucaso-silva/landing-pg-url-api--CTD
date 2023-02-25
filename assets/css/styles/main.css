@@ -12,13 +12,25 @@
     border-radius: 8px;
 }
 
+.input {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: .75em;
+}
+
 .input-url {
     box-sizing: border-box;
     width: 100%;
     padding: .5em 1em;
     border: none;
     border-radius: 8px;
-    margin-bottom: 1.125em;
+    margin-bottom: .5em;
+}
+
+.input-error {
+    color: var(--red);
+    font-size: .85rem;
 }
 
 .input-url::placeholder {
@@ -29,7 +41,7 @@
     width: 100%;
 }
 
-.urls-list {
+.list {
     margin: .85em 0;
     box-sizing: border-box;
 }
@@ -68,7 +80,7 @@
     }
 
     .input-url {
-        margin-bottom: 0;
+        margin-bottom: .75em;
         width: 60%;
     }
 

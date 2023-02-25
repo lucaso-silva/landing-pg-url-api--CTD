@@ -1,13 +1,16 @@
-// const url = "https://api.rebrandly.com/v1/account";
+import createUrlsLine from "./addShortUrl.js";
 
-// async function getInformation() {
-//   const response = await fetch(url);
+const inputButton = document.querySelector(".input-btn");
+const input = document.querySelector(".input-url");
+const msgError = document.querySelector(".input-error");
 
-//   console.log(response);
+inputButton.addEventListener("click", () => {
+  if (!input.value == 0) {
+    createUrlsLine();           
 
-//     const data = await response.json();
-//     console.log(data);
-
-// }
-
-// getInformation();
+    input.value = "";
+    msgError.innerHTML = "";
+  } else {
+    msgError.innerHTML = "Please add a link"
+  }
+});
