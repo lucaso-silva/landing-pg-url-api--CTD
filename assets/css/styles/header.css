@@ -75,3 +75,17 @@ header {
         color: var(--very-dark-violet);
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .logo-header {
+        font-size: 2.75rem;
+    }
+
+    .menu-options {
+        font-size: 1.125rem;
+    }
+
+    .menu-user {
+        font-size: 1.125rem;
+    }
+}

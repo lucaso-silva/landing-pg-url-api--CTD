@@ -43,7 +43,7 @@
     border-radius: 8px;
 }
 
-.url-line p:first-child {
+.url-line a:first-child {
     border-bottom: .1em solid var(--grayish-violet);
 }
 
@@ -82,7 +82,7 @@
         justify-content: space-between;
     }
 
-    .url-line p:first-child {
+    .url-line a:first-child {
         border-bottom: none;
     }
 
@@ -93,5 +93,19 @@
 
     .shrt-url {
         padding: .5em 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .new-url {
+        padding: 1.75em 2em;
+    }
+
+    .input-url {
+        padding: .75em 1em;
+    }
+
+    .input-btn {
+        font-size: 1rem;
     }
 }
