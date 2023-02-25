@@ -1,0 +1,31 @@
+.get-started {
+    background-image: url("../../img/bg-boost-mobile.svg");
+    background-repeat: no-repeat;
+    background-color: var(--dark-violet);
+    padding: 3em 1.5em;
+    text-align: center;
+}
+
+.get-started--title {
+    margin-bottom: 1.25em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.btn-started {
+    font-size: .85rem;
+}
+
+@media screen and (min-width: 768px) {
+    .get-started {
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .get-started--title {
+        font-size: 1.75rem;
+        margin-bottom: .85em;
+    }
+}

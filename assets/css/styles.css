@@ -2,6 +2,8 @@
 @import url("./styles/banner.css");
 @import url("./styles/main.css");
 @import url("./styles/more-info.css");
+@import url("./styles/get-started.css");
+@import url("./styles/footer.css");
 
 :root {
   --main-font: "Poppins", sans-serif;
