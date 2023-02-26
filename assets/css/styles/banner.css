@@ -61,7 +61,7 @@
 
 @media screen and (min-width: 1024px) {
     .banner {
-        padding: 1em 4.75em;
+        padding: 3em 4.75em;
     }
 
     .banner-content {
@@ -78,8 +78,8 @@
     }
 
     .banner-img {
-        width: 410px;
-        height: 275px;
+        width: 450px;
+        height: 305px;
     }
     .banner-btn {
         font-size: 1.125rem;

@@ -14,6 +14,39 @@ header {
 .menu {
     display: none;
 }
+
+.menu-mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-violet);
+    position: absolute;
+    top: 13%;
+    padding: 1.5em;
+    width: 80vw;
+    border-radius: 10px;
+    line-height: 2.5;
+    text-align: center;
+    z-index: 1;
+}
+
+.options-link--mobile {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.menu-user--mobile {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.user-login--mobile {
+    color: var(--white);
+    border-top: .75px solid var(--gray);
+    padding: .5em 0;
+    margin-top: 1em;
+}
+
 .menu-hamburger-checkbx {
     display: none;
 }
