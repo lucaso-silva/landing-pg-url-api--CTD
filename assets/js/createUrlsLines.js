@@ -1,19 +1,21 @@
 const input = document.querySelector(".input-url");
 
-
-export default function createUrlsLine() {
+export default function createUrlsLine(shortUrlValue) {
     const urlList = document.querySelector(".urls-list");
+    const inputValue = input.value;
     
     const urlLine = document.createElement("li");
     urlLine.classList.add("url-line");
 
     const longUrl = document.createElement("a");
     longUrl.classList.add("long-url");
-    longUrl.innerHTML = input.value;
+    longUrl.setAttribute("href", inputValue)
+    longUrl.innerHTML = inputValue;
 
     const shortUrl = document.createElement("a");
     shortUrl.classList.add("shrt-url");
-    shortUrl.innerHTML = "ex1shortHTML";
+    shortUrl.setAttribute("href", shortUrlValue)
+    shortUrl.innerHTML = shortUrlValue;
 
     const lineButton = document.createElement("button");
     lineButton.classList.add("btn-retng");
