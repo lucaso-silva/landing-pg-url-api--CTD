@@ -1,10 +1,27 @@
-
+import openMenuMobile from "./openMenuMobile.js";
+import closeMenuMobile from "./closeMenuMobile.js";
 import createUrlsLine from "./createUrlsLines.js";
 
+const btnHamburger = document.querySelector(".img-menu");
 const inputButton = document.querySelector(".input-btn");
+let isMenuOpen = false;
 const msgError = document.querySelector(".input-error");
 
+
 const API_URL = "https://api.shrtco.de/v2"
+
+
+btnHamburger.addEventListener("click", () => {
+  if(!isMenuOpen) {
+    openMenuMobile();
+    isMenuOpen = true;
+  } else {
+    closeMenuMobile();
+    isMenuOpen = false;
+  }
+
+
+});
 
 
 inputButton.addEventListener("click", async function () {
