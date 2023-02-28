@@ -5,6 +5,7 @@ import copyClipboard from "./copyClipboard.js";
 
 const form = document.querySelector(".form-new-url");
 const btnHamburger = document.querySelector(".img-menu");
+const input = document.querySelector(".input-url");
 const inputButton = document.querySelector(".input-btn");
 const msgError = document.querySelector(".input-error");
 let isMenuOpen = false;
@@ -24,6 +25,19 @@ btnHamburger.addEventListener("click", () => {
 form.addEventListener("submit", (event)=>{
   event.preventDefault();
 })
+
+input.addEventListener("blur", ()=>{
+  const inputValidity = input.checkValidity();
+
+  if(!inputValidity) {
+    inputButton.disabled = true;
+    msgError.classList.add("input-error")
+    msgError.innerHTML = "Please add a link."
+  } else {
+    inputButton.disabled = false;
+    msgError.innerHTML = ""
+  }
+});
 
 inputButton.addEventListener("click", async function () {
       const input = document.querySelector(".input-url");
@@ -55,9 +69,4 @@ inputButton.addEventListener("click", async function () {
         });
       })
   }
-    
-  //   msgError.innerHTML = "";
-  // } else {
-  //   msgError.innerHTML = "Please add a link"
-  // }
 );
