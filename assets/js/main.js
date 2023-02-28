@@ -1,15 +1,14 @@
 import openMenuMobile from "./openMenuMobile.js";
 import closeMenuMobile from "./closeMenuMobile.js";
 import createUrlsLine from "./createUrlsLines.js";
+import copyClipboard from "./copyClipboard.js";
 
 const btnHamburger = document.querySelector(".img-menu");
 const inputButton = document.querySelector(".input-btn");
-let isMenuOpen = false;
 const msgError = document.querySelector(".input-error");
-
+let isMenuOpen = false;
 
 const API_URL = "https://api.shrtco.de/v2"
-
 
 btnHamburger.addEventListener("click", () => {
   if(!isMenuOpen) {
@@ -19,8 +18,6 @@ btnHamburger.addEventListener("click", () => {
     closeMenuMobile();
     isMenuOpen = false;
   }
-
-
 });
 
 
@@ -29,13 +26,21 @@ inputButton.addEventListener("click", async function () {
       const inputValue = input.value;
   
       const result = await fetch(`${API_URL}/shorten?url=${inputValue}`);
-      const shortedResult = await result.json();
-  
-      const shortUrlValue = shortedResult.result.short_link
+      const apiResult = await result.json();
       
-      createUrlsLine(shortUrlValue);
-
+      const longUrlValue = apiResult.result.original_link;
+      const shortUrlValue = apiResult.result.short_link;
+      
+      createUrlsLine(longUrlValue, shortUrlValue);
+      
       input.value = ""
+
+      const btnsCopy = document.querySelectorAll(".btn-copy");
+      console.log(btnsCopy);
+
+      btnsCopy.forEach(btn => {
+        btn.addEventListener("click", copyClipboard);
+      })
   }
     
   //   msgError.innerHTML = "";

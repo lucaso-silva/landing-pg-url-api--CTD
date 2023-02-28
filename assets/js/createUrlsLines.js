@@ -1,16 +1,16 @@
-const input = document.querySelector(".input-url");
+// const input = document.querySelector(".input-url");
 
-export default function createUrlsLine(shortUrlValue) {
+export default function createUrlsLine(longUrlValue, shortUrlValue) {
     const urlList = document.querySelector(".urls-list");
-    const inputValue = input.value;
+    // const inputValue = input.value;
     
     const urlLine = document.createElement("li");
     urlLine.classList.add("url-line");
 
     const longUrl = document.createElement("a");
     longUrl.classList.add("long-url");
-    longUrl.setAttribute("href", inputValue)
-    longUrl.innerHTML = inputValue;
+    longUrl.setAttribute("href", longUrlValue)
+    longUrl.innerHTML = longUrlValue;
 
     const shortUrl = document.createElement("a");
     shortUrl.classList.add("shrt-url");
