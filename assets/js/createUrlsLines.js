@@ -29,5 +29,5 @@ export default function createUrlsLine(longUrlValue, shortUrlValue) {
 
     urlList.appendChild(urlLine);
 
-    console.log(urlList);
+    // console.log(urlList);
 }

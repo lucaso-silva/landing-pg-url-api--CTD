@@ -7,17 +7,9 @@
 
 :root {
   --main-font: "Poppins", sans-serif;
-  /* Primary */
-
   --cyan: #2acfcf;
   --dark-violet: #3b3054;
-
-  /* Secondary  */
-
   --red: #f46262;
-
-  /* Neutral */
-
   --gray: #bfbfbf;
   --grayish-violet: #9e9aa7;
   --very-dark-blue: #35323e;
@@ -59,6 +51,14 @@ a {
   border-radius: 5px;
   color: var(--white);
   border: none;
+  font-weight: 600;
+}
+
+.btn-retng:hover {
+  cursor: pointer;
+  border: .15em solid var(--white);
+  color: var(--very-dark-violet);
+  opacity: .5;
 }
 
 .container {

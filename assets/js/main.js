@@ -3,6 +3,7 @@ import closeMenuMobile from "./closeMenuMobile.js";
 import createUrlsLine from "./createUrlsLines.js";
 import copyClipboard from "./copyClipboard.js";
 
+const form = document.querySelector(".form-new-url");
 const btnHamburger = document.querySelector(".img-menu");
 const inputButton = document.querySelector(".input-btn");
 const msgError = document.querySelector(".input-error");
@@ -20,6 +21,9 @@ btnHamburger.addEventListener("click", () => {
   }
 });
 
+form.addEventListener("submit", (event)=>{
+  event.preventDefault();
+})
 
 inputButton.addEventListener("click", async function () {
       const input = document.querySelector(".input-url");
@@ -36,10 +40,19 @@ inputButton.addEventListener("click", async function () {
       input.value = ""
 
       const btnsCopy = document.querySelectorAll(".btn-copy");
-      console.log(btnsCopy);
 
-      btnsCopy.forEach(btn => {
-        btn.addEventListener("click", copyClipboard);
+      btnsCopy.forEach((btn, index) => {
+        btn.addEventListener("click", ()=> {
+          
+          copyClipboard(index);
+          btn.classList.add("copied");
+          btn.innerHTML = "Copied.."
+
+          setTimeout(()=> {
+            btn.classList.remove("copied");
+            btn.innerHTML = "Copy";
+          }, 2000)
+        });
       })
   }
     

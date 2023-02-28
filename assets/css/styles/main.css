@@ -69,7 +69,7 @@
     color: var(--cyan);
 }
 
-.btn-copy:active {
+.copied {
     background-color: var(--dark-violet);
 }
 

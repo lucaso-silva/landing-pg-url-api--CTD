@@ -44,11 +44,13 @@
     <div class="container">
     <main class="main-container">
         <section class="new-url">
-            <div class="input">
-                <input type="url" class="input-url" placeholder="Shorten a link here...">
-                <span class="input-error"></span>
-            </div>
-            <button type="button" class="btn-retng input-btn">Shorten It!</button>
+            <form class="form-new-url">
+                <div class="input">
+                    <input id="new-url" type="text" class="input-url" placeholder="Shorten a link here..." pattern="(?<http>(http:[/][/]|www.)([a-z]|[A-Z]|[0-9]|[/.]|[~])*)">
+                    <span class="input-error"></span>
+                </div>
+                <button for="new-url" type="submit" class="btn-retng input-btn">Shorten It!</button>
+            </form>
         </section>
         <section class="list">
             <ul class="urls-list">
