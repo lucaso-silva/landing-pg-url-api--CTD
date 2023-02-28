@@ -19,6 +19,7 @@
 
 @media screen and (min-width: 768px) {
     .get-started {
+        background-image: url("../../img/bg-boost-desktop.svg");
         background-size: cover;
     }
 }
