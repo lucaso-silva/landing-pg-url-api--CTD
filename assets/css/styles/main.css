@@ -1,15 +1,18 @@
 .new-url {
     background-image: url("../../img/bg-shorten-mobile.svg");
     background-color: var(--dark-violet);
-    background-position: right;
     background-repeat: no-repeat;
-    padding: 1em 2em;
-    background-size: contain;
+    background-position: left bottom;
+    background-size: cover;
+    padding: 1em 1.5em;
+    border-radius: 8px;
+}
+
+.form-new-url {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 8px;
 }
 
 .input {
@@ -17,18 +20,31 @@
     flex-direction: column;
     box-sizing: border-box;
     margin-bottom: .75em;
+    width: 100%;
 }
 
 .input-url {
     box-sizing: border-box;
-    width: 100%;
-    padding: .5em 1em;
+    padding: .85em 1em;
     border: none;
     border-radius: 8px;
     margin-bottom: .5em;
 }
 
+.input-url--error {
+    border: .15em solid var(--red);
+}
+
+.input-url--error::placeholder {
+    color: var(--red);
+}
+
 .input-error {
+    display: none;
+}
+
+.input-error--active {
+    display: block;
     color: var(--red);
     font-size: .85rem;
 }
@@ -39,6 +55,7 @@
 
 .input-btn {
     width: 100%;
+    font-size: .95rem;
 }
 
 .list {
@@ -49,7 +66,7 @@
 .url-line {
     display: flex;
     flex-direction: column;
-    padding: .75em;
+    padding: .75em 1.5em;
     background-color: var(--white);
     margin-bottom: .75em;
     border-radius: 8px;
@@ -69,19 +86,53 @@
     color: var(--cyan);
 }
 
+.btn-copy {
+    background-color: var(--cyan);
+    padding: .75em 1.25em;
+    border-radius: 5px;
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+.btn-copy:hover {
+    cursor: pointer;
+    border: .15em solid var(--very-dark-violet);
+    color: var(--white);
+    opacity: .5;
+}
+
 .copied {
     background-color: var(--dark-violet);
 }
 
 @media screen and (min-width: 768px) {
     .new-url {
+        background-image: url("../../img/bg-shorten-desktop.svg");
+        padding: 1.25em 2em;
+    }
+
+    .form-new-url {
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
     }
 
+    .input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        width: 70%;
+    }
+
     .input-url {
-        margin-bottom: .75em;
-        width: 60%;
+        margin-bottom: 0;
+        padding: 1.25em 1em;
+    }
+
+    .input-error--active {
+        margin-top: .75em;
     }
 
     .input-btn {
@@ -92,6 +143,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        padding: .75em 2em;
     }
 
     .url-line a:first-child {
@@ -110,14 +162,18 @@
 
 @media screen and (min-width: 1024px) {
     .new-url {
-        padding: 1.75em 2em;
+        padding: 1.75em 3em;
     }
 
     .input-url {
-        padding: .75em 1em;
+        padding: 1.125em 1em;
     }
 
     .input-btn {
         font-size: 1rem;
+    }
+
+    .url-line {
+        padding: .75em 3em;
     }
 }

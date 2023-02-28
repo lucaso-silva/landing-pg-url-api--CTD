@@ -31,10 +31,13 @@ input.addEventListener("blur", ()=>{
 
   if(!inputValidity) {
     inputButton.disabled = true;
-    msgError.classList.add("input-error")
-    msgError.innerHTML = "Please add a link."
+    input.classList.add("input-url--error")
+    msgError.classList.add("input-error--active")
+    msgError.innerHTML = "Please add a valid link."
   } else {
     inputButton.disabled = false;
+    input.classList.remove("input-url--error")
+    msgError.classList.remove("input-error--active")
     msgError.innerHTML = ""
   }
 });
@@ -65,7 +68,7 @@ inputButton.addEventListener("click", async function () {
           setTimeout(()=> {
             btn.classList.remove("copied");
             btn.innerHTML = "Copy";
-          }, 2000)
+          }, 3000)
         });
       })
   }

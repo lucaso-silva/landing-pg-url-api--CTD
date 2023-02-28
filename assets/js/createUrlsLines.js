@@ -1,8 +1,6 @@
-// const input = document.querySelector(".input-url");
 
 export default function createUrlsLine(longUrlValue, shortUrlValue) {
     const urlList = document.querySelector(".urls-list");
-    // const inputValue = input.value;
     
     const urlLine = document.createElement("li");
     urlLine.classList.add("url-line");
@@ -18,7 +16,6 @@ export default function createUrlsLine(longUrlValue, shortUrlValue) {
     shortUrl.innerHTML = shortUrlValue;
 
     const lineButton = document.createElement("button");
-    lineButton.classList.add("btn-retng");
     lineButton.classList.add("btn-copy");
     lineButton.innerHTML = "Copy";
 
@@ -28,6 +25,4 @@ export default function createUrlsLine(longUrlValue, shortUrlValue) {
 
 
     urlList.appendChild(urlLine);
-
-    // console.log(urlList);
 }

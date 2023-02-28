@@ -1,6 +1,7 @@
 .infos {
     padding: 2em 0;
 }
+
 .more-info {
     text-align: center;
 }
@@ -31,6 +32,7 @@
     padding: 1em;
     background-color: var(--white);
     border-radius: 8px;
+    height: max-content;
 }
 
 .card-icon {
@@ -38,7 +40,6 @@
     border-radius: 50%;
     padding: .75em;
     width: 60px;
-    /* position: absolute; */
 }
 
 .card-title {
@@ -56,6 +57,14 @@
         flex-direction: row;
         align-items:stretch;
         column-gap: 1em;
+    }
+
+    .more-info--cards div:nth-child(2) {
+        margin-top: 2em;
+    }
+
+    .more-info--cards div:nth-child(3) {
+        margin-top: 4em;
     }
 
     .card-title {
